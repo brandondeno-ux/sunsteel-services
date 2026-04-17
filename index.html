@@ -94,10 +94,12 @@
   .partner-logo-wrap { display: flex; align-items: center; justify-content: center; background: var(--white); padding: 12px 20px; border-radius: 4px; }
   .partner-logo-wrap img { max-height: 56px; max-width: 220px; width: auto; object-fit: contain; display: block; }
   .partner-divider { width: 1px; height: 36px; background: var(--border); }
+  .builders-row { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
+  .builders-row .partner-logo-wrap { flex: 0 0 calc(33.333% - 40px); max-width: 220px; }
 
   .affiliations-section { background: var(--off-white); padding: 52px 0; }
   .affiliations-row { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; margin-top: 28px; }
-  .affil-logo { background: var(--white); padding: 10px 16px; border-radius: 4px; display: flex; align-items: center; justify-content: center; }
+  .affil-logo { background: transparent; padding: 10px 16px; border-radius: 4px; display: flex; align-items: center; justify-content: center; }
   .affil-logo img { max-height: 48px; max-width: 130px; width: auto; object-fit: contain; display: block; }
 
   .cta-strip { background: var(--orange); padding: 80px 0; text-align: center; }
@@ -307,7 +309,7 @@
   <section class="why-section">
     <div class="container">
       <span class="section-eyebrow" style="color:var(--orange);">Why SunSteel</span>
-      <h2 class="section-headline" style="color:var(--white);">Five Reasons Contractors<br><em>Add SunSteel.</em></h2>
+      <h2 class="section-headline" style="color:var(--white);">Five Reasons Contractors<br><em>Add SunSteel<sup style="font-size:0.45em;vertical-align:super;">™</sup>.</em></h2>
       <div class="why-grid">
         <div class="why-card"><div class="why-bar"></div><h3 class="why-title">No Solar Expertise Required</h3><p class="why-desc">SunSteel Services handles solar design, quoting, and permitting. Contractors can offer a complete solar roof solution backed by dedicated development support — no solar background needed.</p></div>
         <div class="why-card"><div class="why-bar"></div><h3 class="why-title">Increased Project Revenue</h3><p class="why-desc">Solar added directly into the building scope means contractors capture the solar revenue — not a separate solar company. An installed SunSteel system can be worth more than 10x standard roofing panels.</p></div>
@@ -319,13 +321,24 @@
     </div>
   </section>
 
-  <section class="partners-section">
+  <section class="partners-section" style="background:var(--off-white);">
     <div class="container">
-      <p class="partners-label">SunSteel Services works with</p>
+      <p class="partners-label">SunSteel&trade; Developed and Manufactured by</p>
       <div class="partners-row">
-        <div class="partner-logo-wrap"><img src="auo-logo.svg" alt="AUO Corporation" /></div>
-        <div class="partner-divider"></div>
-        <div class="partner-logo-wrap"><img src="cornerstone-logo.png" alt="Cornerstone Building Brands" /></div>
+        <div class="partner-logo-wrap" style="background:transparent;"><img src="auo-logo.svg" alt="AUO Corporation" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners-section" style="background:var(--white);border-top:1px solid var(--border);">
+    <div class="container">
+      <p class="partners-label">SunSteel&trade; integrated Double-Lok&trade; system is available through</p>
+      <div class="builders-row">
+        <div class="partner-logo-wrap"><img src="ceco-logo.png" alt="CECO Building Systems" /></div>
+        <div class="partner-logo-wrap"><img src="mbci-logo.png" alt="MBCI" /></div>
+        <div class="partner-logo-wrap"><img src="metallic-logo.png" alt="Metallic Building Systems" /></div>
+        <div class="partner-logo-wrap"><img src="robertson-logo.png" alt="Robertson Building Systems" /></div>
+        <div class="partner-logo-wrap"><img src="star-logo.png" alt="Star Building Systems" /></div>
       </div>
     </div>
   </section>
@@ -475,12 +488,12 @@
         <div class="resource-card">
           <span class="resource-tag">Product Overview</span>
           <h3 class="resource-title">What Is SunSteel?</h3>
-          <p class="resource-desc">SunSteel is a factory-integrated solar roofing system built around AUO's high-efficiency solar modules and Cornerstone's Double-Lok standing seam panels. Solar is integrated at the factory — not assembled at the job site.</p>
+          <p class="resource-desc">SunSteel&trade; is a factory-integrated solar roofing system built around AUO's high-efficiency solar modules and Cornerstone's Double-Lok&trade; standing seam panels. Solar is integrated at the factory — not assembled at the job site.</p>
         </div>
         <div class="resource-card-image">
           <span class="resource-tag">The SunSteel Panel</span>
           <img src="sunsteel-panel.png" alt="The SunSteel Panel" />
-          <p class="patent-ref">SunSteel&trade; integrated solar roofing system &nbsp;|&nbsp; Developed by AUO &nbsp;|&nbsp; U.S. Patent No. XXXXXXXX</p>
+          <p class="patent-ref">SunSteel&trade; integrated solar roofing system &nbsp;|&nbsp; Developed by AUO and Panel Clad Inc. &nbsp;|&nbsp; U.S. Patent No. US-20260088750-A1</p>
         </div>
         <div class="resource-card">
           <span class="resource-tag">Manufacturing</span>
@@ -618,6 +631,7 @@
             <div class="field"><label for="contact_name">Your Name *</label><input type="text" id="contact_name" name="contact_name" placeholder="First and last name" required /></div>
             <div class="field"><label for="email">Email Address *</label><input type="email" id="email" name="email" placeholder="you@company.com" required /></div>
             <div class="field"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" /></div>
+            <div class="field" style="grid-column:1/-1;"><label for="cornerstone_rep">Cornerstone Representative</label><input type="text" id="cornerstone_rep" name="cornerstone_rep" placeholder="Name of your Cornerstone representative (if known)" /></div>
           </div>
           <h3 class="form-section-title">Project Information</h3>
           <div class="form-group">
@@ -639,7 +653,7 @@
           </div>
           <h3 class="form-section-title">Energy Profile & Customer Goals</h3>
           <div class="form-group three-col">
-            <div class="field"><label for="energy_profile">Energy Usage Profile</label><select id="energy_profile" name="energy_profile"><option value="">Select building type...</option><option>Agricultural</option><option>Data Center</option><option>Grocery Store</option><option>Hospital</option><option>Hotel</option><option>Manufacturing</option><option>Office</option><option>Restaurant</option><option>Retail</option><option>School</option><option>Warehouse</option><option>Other</option></select><span class="helper">Building type / use</span></div>
+            <div class="field"><label for="energy_profile">Energy Usage Profile *</label><select id="energy_profile" name="energy_profile" required><option value="">Select building type...</option><option>Agricultural</option><option>Data Center</option><option>Grocery Store</option><option>Hospital</option><option>Hotel</option><option>Manufacturing</option><option>Office</option><option>Restaurant</option><option>Retail</option><option>School</option><option>Warehouse</option><option>Other</option></select><span class="helper">Building type / use</span></div>
             <div class="field"><label for="goal_primary">Customer Goal — Primary *</label><select id="goal_primary" name="goal_primary" required><option value="">Select primary goal...</option><option>Reduce Electric Bills</option><option>Income Tax Reduction</option><option>Sustainability and Electrification</option><option>Green Building Promotion</option><option>CA Building Code Minimum Requirement</option><option>Other</option></select></div>
             <div class="field"><label for="goal_secondary">Customer Goal — Secondary</label><select id="goal_secondary" name="goal_secondary"><option value="">Select secondary goal...</option><option>Reduce Electric Bills</option><option>Income Tax Reduction</option><option>Sustainability and Electrification</option><option>Green Building Promotion</option><option>CA Building Code Minimum Requirement</option><option>None</option><option>Other</option></select></div>
           </div>
@@ -685,7 +699,7 @@
             </ul>
           </div>
           <div class="legal-box">
-            <p>Innovative Clean Energy LLC, doing business as SunSteel Services, provides project development, advisory, and coordination services for SunSteel projects. Innovative Clean Energy is an authorized SunSteel services provider and approved project development partner. SunSteel is a trademark of AUO Corporation and is used under license. Innovative Clean Energy LLC is not the manufacturer of SunSteel products and does not sell SunSteel hardware.</p>
+            <p>Innovative Clean Energy LLC, doing business as SunSteel Services, provides project development, advisory, and coordination services for SunSteel projects. Innovative Clean Energy is an authorized SunSteel services provider and approved project development partner. SunSteel is a trademark of AUO Corporation and is used under license. Innovative Clean Energy LLC is not the manufacturer of SunSteel products and does not sell SunSteel hardware. Double-Lok is a trademark of Cornerstone Building Brands, Inc. and is referenced here solely to describe product compatibility.</p>
           </div>
         </div>
         <div>
