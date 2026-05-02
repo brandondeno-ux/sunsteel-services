@@ -510,16 +510,25 @@
   </section>
   <section style="background:var(--white);padding-top:0;padding-bottom:0;">
     <div class="container" style="padding-top:0;padding-bottom:0;">
-      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:4px;box-shadow:0 4px 24px rgba(0,0,0,0.10);">
-        <iframe
-          src="https://www.youtube.com/embed/s0Xji1Vl-_s"
-          title="SunSteel Integrated Solar Roofing — Installation Comparison"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          style="position:absolute;top:0;left:0;width:100%;height:100%;">
-        </iframe>
+      <div id="videoWrap" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:4px;box-shadow:0 4px 24px rgba(0,0,0,0.12);cursor:pointer;background:#000;" onclick="playVideo()">
+        <img src="video-poster.jpg" alt="SunSteel vs Traditional Roof — Installation Time Comparison" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:4px;" />
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;background:rgba(255,0,0,0.88);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.4);transition:transform 0.15s;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <iframe id="ytPlayer" src="" title="SunSteel Integrated Solar Roofing — Installation Comparison" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;display:none;border-radius:4px;"></iframe>
       </div>
+      <script>
+        function playVideo() {
+          var wrap = document.getElementById('videoWrap');
+          var player = document.getElementById('ytPlayer');
+          player.src = 'https://www.youtube.com/embed/s0Xji1Vl-_s?autoplay=1';
+          player.style.display = 'block';
+          wrap.querySelector('img').style.display = 'none';
+          wrap.querySelector('div').style.display = 'none';
+          wrap.style.cursor = 'default';
+          wrap.onclick = null;
+        }
+      </script>
     </div>
   </section>
 
