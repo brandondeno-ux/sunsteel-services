@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/customers", "destination": "/index.html" },
+    { "source": "/submit", "destination": "/index.html" }
+  ]
+}

@@ -769,6 +769,13 @@
 
 <script>
 function showPage(id) { document.querySelectorAll('.page').forEach(p => p.classList.remove('active')); document.getElementById('page-' + id).classList.add('active'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+// Handle direct URL routes for /customers and /submit
+(function() {
+  var path = window.location.pathname;
+  if (path === '/customers') { showPage('customers'); }
+  else if (path === '/submit') { showPage('submit'); }
+})();
 function toggleMobile() { document.getElementById('mobileMenu').classList.toggle('open'); }
 
 const faqs = [
